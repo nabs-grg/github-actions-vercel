@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
         </a>
       </header>
       <img src="https://www.w3schools.com/images/w3schools_green.jpg" />
+      <Analytics />
     </div>
   );
 }
