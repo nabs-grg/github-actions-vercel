@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   let number = 2;
-  number = '32';
+  number = 32;
   return (
     <div className="App">
       <header className="App-header">
