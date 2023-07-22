@@ -1,13 +1,15 @@
 name: CI
 on: [push]
 jobs:
-  eslint:
-    name: lint code base
+  standard-checks:
+    name: lint and test
     runs-on: ubuntu-latest
 
     steps:
+      - run: node -v
       - name: Checkout code
         uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
 
       - name: Instal packages
         run: npm ci
