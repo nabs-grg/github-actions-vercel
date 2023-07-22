@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const number = 2;
+  let number = 2;
+  number = '32';
   return (
     <div className="App">
       <header className="App-header">
