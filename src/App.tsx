@@ -1,11 +1,26 @@
-import React from 'react';
-import { Analytics } from '@vercel/analytics/react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   let number = 2;
   number = 32;
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('https://jsonplaceholder.typicode.com/posts')
+      .then((result) => {
+        // console.log(result.data);
+        setPosts(result.data);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  console.log(posts);
+
   return (
     <div className="App">
       <header className="App-header">
