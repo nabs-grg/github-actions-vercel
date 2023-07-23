@@ -19,7 +19,7 @@ function App() {
       .catch((error) => console.log(error));
   }, []);
 
-  console.log(posts);
+  console.log(posts, 'ok');
 
   return (
     <div className="App">
